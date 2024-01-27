@@ -77,6 +77,34 @@ p {
     background-color: #e1dada; /* Light gray on hover */
 }
 
+/*Time-Widget*/
+.time-widget {
+    position: fixed;
+    bottom: 60px;
+    left: 700px;
+    background-color: #00008B; /* Dark blue color */
+    color: #ffffff;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 20px;
+    width: 25%; /* Cover less than 1/4th of the page */
+    height: 25%;
+}
+
+/* Style for the time information */
+.time-widget h2 {
+    margin-top: 0; /* Remove default margin for h2 */
+    margin-bottom: 5px; /* Adjust margin as needed */
+    font-size: 35px; /* Increase font size for headings */
+}
+
+/* Style for the time paragraph */
+.time-widget p {
+    margin-top: 0; /* Remove default margin for p */
+    margin-bottom: 10px; /* Adjust margin as needed */
+    font-size: 30px; /* Increase font size for paragraphs */
+}
+
 /* Weather widget styling */
 .weather-widget {
     position: fixed;

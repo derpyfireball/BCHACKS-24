@@ -38,3 +38,12 @@ document.getElementById("planetOptions").addEventListener("change", function() {
     // Redirect to the selected planet's page
     window.location.href = selectedPlanet + ".html";
 });
+
+function navigateToPlanet() {
+    var dropdown = document.getElementById("planetOptions");
+    var selectedOption = dropdown.options[dropdown.selectedIndex].value;
+
+    if (selectedOption !== "Null") {
+        window.location.href = selectedOption + ".html";
+    }
+}

@@ -1,17 +1,67 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pluto Page</title>
     <link rel="stylesheet" href="styles.css">
+    <title>Pluto Page</title>
 </head>
 <body>
 
-    <h1>Welcome to Pluto!</h1>
+    <h1 class="planet-title">Welcome to Pluto!</h1>
 
-    <!-- Add content specific to Mercury -->
-    <a href="index.html" class="home-button">Home</a>
+    <div class="weather-widget" id="plutoWidget">
+        <!-- Weather widget content for Pluto -->
+        <div class="weather-info">
+            
+            <p id="weatherInfo">Actual weather</p>
+
+        </div>
+    </div>
+
+    <!-- Your content for the Pluto page goes here -->
+
+    <div class="home-button">
+        <a href="index.html">Home</a>
+    </div>
+
+    <script src="script.js"></script>
+   <!-- ... -->
+<script>
+    // Function to generate random weather information
+    function generateRandomWeather() {
+        const weatherConditions = ['Cold and mysterious', 'Windy and desolate', 'Occasional ice storms', 'Sparse atmosphere'];
+        const temperatureC = parseFloat((Math.random() * (10 - (-50)) + (-50)).toFixed(1));
+        const temperatureF = parseFloat(((temperatureC * 9/5) + 32).toFixed(1));
+        const temperatureK = parseFloat((temperatureC + 273.15).toFixed(1));
+
+        const randomCondition = weatherConditions[Math.floor(Math.random() * weatherConditions.length)];
+
+        return `${randomCondition}, <strong>Temperature: </strong>${temperatureC}°C / ${temperatureF}°F / ${temperatureK}K`;
+    }
+
+    // Update weather information every 3 minutes
+    function updateWeather() {
+        const weatherInfoElement = document.getElementById('weatherInfo');
+        const temperatureInfoElement = document.getElementById('temperatureInfo');
+
+        // Set initial values
+        const initialWeather = generateRandomWeather();
+        weatherInfoElement.innerHTML = `<strong>Actual weather:</strong> ${initialWeather}`;
+
+        // Update weather every 3 minutes
+        setInterval(() => {
+            const randomWeather = generateRandomWeather();
+            weatherInfoElement.innerHTML = `<strong>Actual weather:</strong> ${randomWeather}`;
+        }, 180000); // 3 minutes in milliseconds
+    }
+
+    window.onload = function() {
+        updateWeather();
+    };
+</script>
+<!-- ... -->
+
 
 </body>
 </html>

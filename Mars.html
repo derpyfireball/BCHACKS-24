@@ -1,47 +1,217 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" >
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mars</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+        </style>
+    <title>Pluto Page</title>
 </head>
-<body>
+<body style="background-color: #212121;">
+  
+    <h1 class="planet-title">Welcome to Pluto!</h1>
 
-    <h1>Welcome to Mars!</h1>
 
-    <!-- Add content specific to Mercury -->
-    <a href="index.html" class="home-button">Home</a>
-</body>
-<div class = "card2">
-    <h1>Guide</h1>
-    <li>If you see aliens call the space police immediately.</li>
-    <li>You can remove your oxygen mask or your space suit.</li>
-    <li>Mercury is the closest planet to the sun - don't melt.</li>
-    <li>Don't keep anything outside your space suit - it will melt. </li>
-    <li>There are many scientific studies going on - so be careful.</li>
+        <!-- Add the fun fact container -->
+        <div id="fun-fact-container"></div>
+
+        <script>
+            // Array of fun facts
+            const funFacts = [
+                "Pluto is not considered a planet anymore.",
+                "Pluto is the only dwarf planet with a moon named Charon.",
+                // Add more fun facts as needed
+            ];
+    
+            // Function to update the fun fact with fade-in and fade-out
+            function updateFunFact() {
+                const funFactContainer = document.getElementById('fun-fact-container');
+                let index = 0;
+    
+                function fadeIn() {
+                    let opacity = 0;
+                    const intervalId = setInterval(() => {
+                        funFactContainer.style.opacity = opacity;
+                        opacity += 0.1;
+    
+                        if (opacity > 1) {
+                            clearInterval(intervalId);
+                            setTimeout(fadeOut, 2000); // Adjust the delay before fade-out (milliseconds)
+                        }
+                    }, 100);
+                }
+    
+                function fadeOut() {
+                    let opacity = 1;
+                    const intervalId = setInterval(() => {
+                        funFactContainer.style.opacity = opacity;
+                        opacity -= 0.1;
+    
+                        if (opacity < 0) {
+                            clearInterval(intervalId);
+                            updateNextFunFact();
+                        }
+                    }, 100);
+                }
+    
+                function updateNextFunFact() {
+                    index = (index + 1) % funFacts.length;
+                    funFactContainer.textContent = funFacts[index];
+                    fadeIn();
+                }
+    
+                // Initial display
+                funFactContainer.textContent = funFacts[index];
+                fadeIn();
+            }
+    
+            // Call the function to start the fun fact loop
+            updateFunFact();
+        </script>
+    
+    </div>
+    <!-- New widget for displaying time -->
+    <div class="time-widget" id="timeWidget">
+        <h2>Current Time:</h2>
+        <p id="currentTime">Loading...</p>
+    </div>
+    <div class ="containerx">
+    <div id="time" class=> 
+        <span class="digit" id="hr"> 
+            00</span> 
+        <span class="txt">Hr</span> 
+        <span class="digit" id="min"> 
+            00</span> 
+        <span class="txt">Min</span> 
+        <span class="digit" id="sec"> 
+            00</span> 
+        <span class="txt">Sec</span> 
+        <span class="digit" id="count"> 
+            00</span> 
+    </div> 
+    <div id="buttons"> 
+        <button class="btn" id="start"> 
+            Start</button> 
+        <button class="btn" id="stop"> 
+            Stop</button> 
+        <button class="btn" id="reset"> 
+            Reset</button> 
+    </div> 
 </div>
-<!-- Add this HTML code where you want the Mars time widget to appear -->
-<div class="time-widget">
-    <h2>Current Time:</h2>
-    <p id="marsTime">Loading...</p>
-  </div>
+</div> 
 
-<script>
-    function updateMarsTime() {
-      // Display the Mars time (assuming a fixed time difference of 40 minutes)
-      const marsTimeDifference = 40 / 60; // You need to adjust this based on the actual time difference
-      const marsTime = new Date(new Date().getTime() + marsTimeDifference * 60 * 60 * 1000).toLocaleTimeString();
-  
-      // Display the Mars time
-      document.getElementById('marsTime').innerText = `${marsTime}`;
+    <!-- Your content for the Pluto page goes here -->
+
+    <div class="home-button">
+        <a href="index.html">Home</a>
+    </div>
+   
+    <div class="cardContainer">
+        <div class="card">
+        <div>
+          <p class="city">Pluto</p>
+         
+            <image class= "image"
+              width=150
+              src="https://upload.wikimedia.org/wikipedia/commons/9/94/Pluto-transparent.png"
+            ></image>
+        </div>
+            <div>
+               <p class="weather">A Little Chilly</p>
+               <p class="temp">-232°C</p>
+                 <div class="minmaxContainer">
+                   <div class="min">
+                     <p class="minHeading">Min.</p>
+                       <p class="minTemp">-300°C</p>
+                   </div>
+                   <div class="max">
+                     <p class="maxHeading">Max.</p>
+                     <p class="maxTemp">-230°C</p>
+                   </div>
+                 </div>
+          </div>
+          
+          
+        </div>
+      </div>
+      
+      <div class = "card2">
+        <h1>Guide</h1>
+        <li>If you see aliens call the space police immediately.</li>
+        <li>Pluto is a very cold planet - keep yourself warm.</li>
+        <li>Don't keep anything bright as it is reflective and dangerous with the planet's atmosphere.</li>
+        <li>Never remove your oxygen mask.</li>
+        <li>Time is not the same so ignore it as much as you can.</li>
+    </div>
+    <div class="stats">
+        <h1>Statistics</h1>
+        <li>You are 7.5 billion killometers away from earth.</li>
+        <li>Your planet is of icy state</li>
+        <li>You are located in Kuiper Belt.</li>
+        <li>You have 5 moons</li>
+        <li>The radius of your planet 1188.3 kms..</li>
+    </div>
+    <div class="distance">
+        <img class="compareimage" width="300" src="pluto.jpeg">
+        <text>Nearest Space Station is 400 killometers away</text>
+    </div>
+    
+
+
+    <script src="script.js"></script>
+    <script src="stopwatch.js"></script>
+
+    <script>
+        let timerInterval;
+        let timerSeconds = 0;
+        // Function to update the current time
+        function updateCurrentTime() {
+            const currentTimeElement = document.getElementById('currentTime');
+            const currentTime = new Date().toLocaleTimeString();
+            currentTimeElement.innerHTML = `<strong>${currentTime}</strong>`;
+        }
+
+ // Function to generate random weather information
+ function generateRandomWeather() {
+        const weatherConditions = ['Cold and mysterious', 'Windy and desolate', 'Occasional ice storms', 'Sparse atmosphere'];
+        const temperatureC = parseFloat((Math.random() * (10 - (-50)) + (-50)).toFixed(1));
+        const temperatureF = parseFloat(((temperatureC * 9/5) + 32).toFixed(1));
+        const temperatureK = parseFloat((temperatureC + 273.15).toFixed(1));
+
+        const randomCondition = weatherConditions[Math.floor(Math.random() * weatherConditions.length)];
+
+        return `${randomCondition}, <br><strong>Temperature:</strong></br>${temperatureC}°C / ${temperatureF}°F / ${temperatureK}K`;
     }
-  
-    // Call the function to update the Mars time
-    updateMarsTime();
-  
-    // Update the Mars time every second
-    setInterval(updateMarsTime, 1000);
-  </script>
-  
+
+    // Update weather information every 3 minutes
+    function updateWeather() {
+        const weatherInfoElement = document.getElementById('weatherInfo');
+        const temperatureInfoElement = document.getElementById('temperatureInfo');
+
+        // Set initial values
+        const initialWeather = generateRandomWeather();
+        weatherInfoElement.innerHTML = `<br><strong>Actual weather:</strong></br> ${initialWeather}`;
+
+        // Update weather every 3 minutes
+        setInterval(() => {
+            const randomWeather = generateRandomWeather();
+            weatherInfoElement.innerHTML = `<strong>Actual weather:</strong> ${randomWeather}`;
+        }, 180000); // 3 minutes in milliseconds
+    }
+
+    setInterval(updateCurrentTime, 1000);
+
+    window.onload = function() {
+        updateWeather();
+        updateCurrentTime();
+    };
+    </script>
+
+    
+</body>
 </html>

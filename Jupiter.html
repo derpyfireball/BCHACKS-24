@@ -10,12 +10,12 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
         </style>
-    <title>Jupiter Page</title>
+    <title>Pluto Page</title>
 </head>
 <body style="background-color: #212121;">
   
+    <h1 class="planet-title">Welcome to Pluto!</h1>
 
-    <h1 class="planet-title">Welcome to Jupiter!</h1>
 
         <!-- Add the fun fact container -->
         <div id="fun-fact-container"></div>
@@ -23,11 +23,9 @@
         <script>
             // Array of fun facts
             const funFacts = [
-              "A year on Jupiter is the same as 11.8 Earth years.",
-              "Jupiter has 80 moons!",
-              "Jupiter has rings! They're just very faint.",
-              "Jupiter is a gas giant!",
-              "Jupiter is the biggest planet in ur solar system.",
+                "Pluto is not considered a planet anymore.",
+                "Pluto is the only dwarf planet with a moon named Charon.",
+                // Add more fun facts as needed
             ];
     
             // Function to update the fun fact with fade-in and fade-out
@@ -82,26 +80,32 @@
         <h2>Current Time:</h2>
         <p id="currentTime">Loading...</p>
     </div>
-
-<div class = "container">
-    <h1>Stopwatch</h1>
-    <div id = "time">
-        <span class = "dig" id = "hr">00</span>
-        <span class = "text">hr</span>
-        <span class = "dig" id = "min">00</span>
-        <span class = "text">min</span>
-        <span class = "dig" id = "sec">00</span>
-        <span class = "text">sec</span>
-        <span class = "dig" id = "cnt">00</span>
-    </div>
-    <div id="buttons">
-        <button class="button" id = "start">Start</button>
-        <button class="button" id="stop">Stop</button>
-        <button class="Reset" id="reset">Reset</button>
-    </div>
+    <div class ="containerx">
+    <div id="time" class=> 
+        <span class="digit" id="hr"> 
+            00</span> 
+        <span class="txt">Hr</span> 
+        <span class="digit" id="min"> 
+            00</span> 
+        <span class="txt">Min</span> 
+        <span class="digit" id="sec"> 
+            00</span> 
+        <span class="txt">Sec</span> 
+        <span class="digit" id="count"> 
+            00</span> 
+    </div> 
+    <div id="buttons"> 
+        <button class="btn" id="start"> 
+            Start</button> 
+        <button class="btn" id="stop"> 
+            Stop</button> 
+        <button class="btn" id="reset"> 
+            Reset</button> 
+    </div> 
 </div>
+</div> 
 
-    <!-- Your content for the Jupiter page goes here -->
+    <!-- Your content for the Pluto page goes here -->
 
     <div class="home-button">
         <a href="index.html">Home</a>
@@ -110,11 +114,11 @@
     <div class="cardContainer">
         <div class="card">
         <div>
-          <p class="city">Jupiter</p>
+          <p class="city">Pluto</p>
          
             <image class= "image"
               width=150
-              src="https://upload.wikimedia.org/wikipedia/commons/e/e1/Jupiter_%28transparent%29.png"
+              src="https://upload.wikimedia.org/wikipedia/commons/9/94/Pluto-transparent.png"
             ></image>
         </div>
             <div>
@@ -143,9 +147,24 @@
         <li>Don't keep anything bright as it is reflective and dangerous with the planet's atmosphere.</li>
         <li>Never remove your oxygen mask.</li>
         <li>Time is not the same so ignore it as much as you can.</li>
+    </div>
+    <div class="stats">
+        <h1>Statistics</h1>
+        <li>You are 7.5 billion killometers away from earth.</li>
+        <li>Your planet is of icy state</li>
+        <li>You are located in Kuiper Belt.</li>
+        <li>You have 5 moons</li>
+        <li>The radius of your planet 1188.3 kms..</li>
+    </div>
+    <div class="distance">
+        <img class="compareimage" width="300" src="pluto.jpeg">
+        <text>Nearest Space Station is 400 killometers away</text>
+    </div>
+    
 
 
     <script src="script.js"></script>
+    <script src="stopwatch.js"></script>
 
     <script>
         let timerInterval;

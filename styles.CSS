@@ -2,9 +2,20 @@ main{
     background: #212121;
     box-shadow: 15px 15px 30px rgb(25, 25, 25),
                 -15px -15px 30px rgb(60, 60, 60);
+                font-family: 'Bebas Neue', sans-serif;
     
 }
-
+.intro{
+    background-color: #212121;
+    color: #ffffff;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 80px;
+    
+}
+.intro heading{
+    font-size: 80px;
+    color:#ffff
+}
 body {
     text-align: center;
     margin: 50px;
@@ -56,20 +67,33 @@ p {
 
 .dropdown {
     position: relative;
-    top: 250px;
+    top: 100px;
     display: inline-block;
     font-family: 'Bebas Neue', sans-serif;
+   
+    
+    
+}
+.dropdown label{
+    font-family: 'Bebas Neue', sans-serif;
+   
+
 }
 
 /* Style the dropdown label and select */
 .dropdown label, .dropdown select {
     background: #212121;
     color: #fff;
-    padding: 10px;
+    padding: 20px;
     font-size: 16px;
     border: none;
     cursor: pointer;
     font-family: 'Bebas Neue', sans-serif;
+    font-size: 30px;
+    background: #212121;
+    box-shadow: 15px 15px 30px rgb(25, 25, 25),
+                -15px -15px 30px rgb(60, 60, 60);
+    border-radius: 30px;
 }
 
 /* Style the dropdown content (hidden by default) */
@@ -83,7 +107,8 @@ p {
     width: 100%; /* Match the width of the button */
     top: 40px; /* Adjust the top spacing */
     font-family: 'Bebas Neue', sans-serif;
-    top: 28px; /* Adjust the top spacing */
+    top: 80px; /* Adjust the top spacing */
+    font-size: 20px;
 }
 
 /* Style the dropdown options */

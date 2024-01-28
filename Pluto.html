@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="Pluto-FACTS.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
@@ -17,7 +18,133 @@
 
     <h1 class="planet-title">Welcome to Pluto!</h1>
 
+    <div class="weather-widget" id="plutoWidget">
+        <!-- Weather widget content for Pluto -->
+        <div class="weather-info">
+            <p id="weatherInfo">Actual weather</p>
+        </div>
+    </div>
+
+    <!-- New widget for displaying time -->
+    <div class="time-widget" id="timeWidget">
+        <h2>Current Time:</h2>
+        <p id="currentTime">Loading...</p>
+    </div>
+
+    <!-- Add the fun fact container -->
+    <div id="fun-fact-container"></div>
+
+    <div class="home-button">
+        <a href="index.html">Home</a>
+    </div>
+
+    <script src=""script.js"></script>
+    <script>
+
+    </script>
     
+    <script>
+        // Array of fun facts
+        const funFacts = [
+            "Pluto is not considered a planet anymore.",
+            "Pluto is the only dwarf planet with a moon named Charon.",
+            // Add more fun facts as needed
+        ];
+
+        // Function to update the fun fact with custom fade-in and fade-out
+        function updateFunFact() {
+            const funFactContainer = document.getElementById('fun-fact-container');
+            let index = 0;
+
+            function fadeIn() {
+                let opacity = 0;
+                const intervalId = setInterval(() => {
+                    funFactContainer.style.opacity = opacity;
+                    opacity += 0.1;
+
+                    if (opacity > 1) {
+                        clearInterval(intervalId);
+                        setTimeout(() => {
+                            addFadeOutColor(() => {
+                                updateNextFunFact();
+                            });
+                        }, 6000); // Fade-out after 6 seconds (adjust as needed)
+                    }
+                }, 200); // 2-second fade-in (adjust as needed)
+            }
+
+            function fadeOut() {
+                let opacity = 1;
+                const intervalId = setInterval(() => {
+                    funFactContainer.style.opacity = opacity;
+                    opacity -= 0.1;
+
+                    if (opacity < 0) {
+                        clearInterval(intervalId);
+                    }
+                }, 200); // 2-second fade-out (adjust as needed)
+            }
+
+            function addFadeOutColor(callback) {
+                // Add fade-out color for 2 seconds (adjusted from 0.5 seconds)
+                funFactContainer.style.backgroundColor = '#cf1f1f'; // Fade-out color
+                setTimeout(() => {
+                    funFactContainer.style.backgroundColor = ''; // Reset background color
+                    fadeOut();
+                    callback();
+                }, 2000); // Extended fade-out color duration to 2 seconds
+            }
+
+            function updateNextFunFact() {
+                index = (index + 1) % funFacts.length;
+                funFactContainer.textContent = funFacts[index];
+                fadeIn();
+            }
+
+            // Initial display
+            funFactContainer.textContent = funFacts[index];
+            fadeIn();
+        }
+
+        // Call the function to start the fun fact loop
+        updateFunFact();
+    </script>
+
+    <script>
+        // Function to generate random weather information
+        function generateRandomWeather() {
+            const weatherConditions = ['Cold and mysterious', 'Windy and desolate', 'Occasional ice storms', 'Sparse atmosphere'];
+            const temperatureC = parseFloat((Math.random() * (10 - (-50)) + (-50)).toFixed(1));
+            const temperatureF = parseFloat(((temperatureC * 9/5) + 32).toFixed(1));
+            const temperatureK = parseFloat((temperatureC + 273.15).toFixed(1));
+
+            const randomCondition = weatherConditions[Math.floor(Math.random() * weatherConditions.length)];
+
+            return `${randomCondition}, <strong>Temperature: </strong>${temperatureC}°C / ${temperatureF}°F / ${temperatureK}K`;
+        }
+
+        // Update weather information every 3 minutes
+        function updateWeather() {
+            const weatherInfoElement = document.getElementById('weatherInfo');
+
+            // Set initial values
+            const initialWeather = generateRandomWeather();
+            weatherInfoElement.innerHTML = `<strong>Actual weather:</strong> ${initialWeather}`;
+
+            // Update weather every 3 minutes
+            setInterval(() => {
+                const randomWeather = generateRandomWeather();
+                weatherInfoElement.innerHTML = `<strong>Actual weather:</strong> ${randomWeather}`;
+            }, 180000); // 3 minutes in milliseconds
+        }
+
+        window.onload = function() {
+            updateWeather();
+            updateCurrentTime();
+        };
+    </script>
+
+        </div>
     </div>
     <!-- New widget for displaying time -->
     <div class="time-widget" id="timeWidget">

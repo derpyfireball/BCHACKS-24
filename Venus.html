@@ -10,7 +10,7 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
         </style>
-    <title>Pluto Page</title>
+    <title>Venus Page</title>
 </head>
 <body style="background-color: #212121;">
   
@@ -175,7 +175,7 @@
         // Function to update the current time
         function updateCurrentTime() {
             const currentTimeElement = document.getElementById('currentTime');
-            const currentTime = new Date().toLocaleTimeString();
+            const currentTime = new Date().toLocaleTimeString('en-US', { timeZone: 'Europe/London' });
             currentTimeElement.innerHTML = `<strong>${currentTime}</strong>`;
         }
 

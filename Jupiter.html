@@ -10,7 +10,7 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
         </style>
-    <title>Pluto Page</title>
+    <title>Jupiter Page</title>
 </head>
 <body style="background-color: #212121;">
   
@@ -152,11 +152,11 @@
     </div>
     <div class="stats">
         <h1>Statistics</h1>
-        <li>You are 7.5 billion killometers away from earth.</li>
-        <li>Your planet is of icy state</li>
-        <li>You are located in Kuiper Belt.</li>
-        <li>You have 5 moons</li>
-        <li>The radius of your planet 1188.3 kms..</li>
+        <li>You are 714 million killometers away from earth.</li>
+        <li>Your planet is of gaseous state</li>
+        <li>You are 5.2 astronomical units away from the sun.</li>
+        <li>You have 95 moons</li>
+        <li>The radius of your planet 69911 kms..</li>
     </div>
     <div class="distance">
         <img class="compareimage" width="300" src="pluto.jpeg">
@@ -174,7 +174,7 @@
         // Function to update the current time
         function updateCurrentTime() {
             const currentTimeElement = document.getElementById('currentTime');
-            const currentTime = new Date().toLocaleTimeString();
+            const currentTime = new Date().toLocaleTimeString('en-US', { timeZone: 'America/Indiana/Indianapolis' });
             currentTimeElement.innerHTML = `<strong>${currentTime}</strong>`;
         }
 

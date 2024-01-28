@@ -38,7 +38,7 @@ p {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     z-index: 1;
     width: 100%; /* Match the width of the button */
-    top: 40px; /* Adjust the top spacing */
+    top: 28px; /* Adjust the top spacing */
 }
 
 /* Style the dropdown options */
@@ -84,7 +84,7 @@ p {
     left: 450px;
     background-color: #00008B; /* Dark blue color */
     color: #ffffff;
-    padding: 10px;
+    padding: 20px;
     border-radius: 5px;
     font-size: 20px;
     width: 25%; /* Cover less than 1/4th of the page */
@@ -112,7 +112,7 @@ p {
     left: 50px;
     background-color: #f26c18;
     color: #ffffff;
-    padding: 10px;
+    padding: 20px;
     border-radius: 5px;
     font-size: 20px;
     width: 25%; /* Cover less than 1/4th of the page */
@@ -125,17 +125,11 @@ p {
     overflow: hidden; /* Hide overflow to prevent scrolling */
 }
 
-/* Style for headings */
-.weather-info h2 {
-    margin-top: 0; /* Remove default margin for h2 */
-    margin-bottom: 5px; /* Adjust margin as needed */
-    font-size: 30px; /* Increase font size for headings */
-}
 
 /* Style for paragraphs */
 .weather-info p {
-    margin-top: 0; /* Remove default margin for p */
-    margin-bottom: 10px; /* Adjust margin as needed */
+    margin-top: 0px; /* Remove default margin for p */
+    margin-bottom: 50px; /* Adjust margin as needed */
     font-size: 20px; /* Increase font size for paragraphs */
 }
 

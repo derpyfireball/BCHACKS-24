@@ -13,10 +13,7 @@
     <div class="weather-widget" id="plutoWidget">
         <!-- Weather widget content for Pluto -->
         <div class="weather-info">
-            <h2>Weather:</h2>
             <p id="weatherInfo">Actual weather</p>
-            <h2>Temperature:</h2>
-            <p id="temperatureInfo">Actual weather</p>
 
         </div>
     </div>
@@ -50,7 +47,7 @@
 
         const randomCondition = weatherConditions[Math.floor(Math.random() * weatherConditions.length)];
 
-        return `${randomCondition}, ${temperatureC}°C / ${temperatureF}°F / ${temperatureK}K`;
+        return `${randomCondition}, <br><strong>Temperature:</strong></br>${temperatureC}°C / ${temperatureF}°F / ${temperatureK}K`;
     }
 
     // Update weather information every 3 minutes
@@ -60,12 +57,12 @@
 
         // Set initial values
         const initialWeather = generateRandomWeather();
-        weatherInfoElement.innerHTML = `${initialWeather}`;
+        weatherInfoElement.innerHTML = `<br><strong>Actual weather:</strong></br> ${initialWeather}`;
 
         // Update weather every 3 minutes
         setInterval(() => {
             const randomWeather = generateRandomWeather();
-            weatherInfoElement.innerHTML = `${randomWeather}`;
+            weatherInfoElement.innerHTML = `<strong>Actual weather:</strong> ${randomWeather}`;
         }, 180000); // 3 minutes in milliseconds
     }
 

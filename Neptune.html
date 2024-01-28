@@ -8,7 +8,7 @@
 </head>
 <body>
 
-    <h1>Welcome to Neptune!</h1>
+    <h1 class="planet-title">Welcome to Neptune!</h1>
 
     <!-- Add content specific to Mercury -->
     <a href="index.html" class="home-button">Home</a>
@@ -17,10 +17,41 @@
     <h2>Current Time:</h2>
     <p id="currentTime">Loading...</p>
   </div>
-  <div class = "card">
-    <h1>Facts</h1>
-  </div>
+  <div class ="container">
+    <div id="time" class=> 
+        <span class="digit" id="hr"> 
+            00</span> 
+        <span class="txt">Hr</span> 
+        <span class="digit" id="min"> 
+            00</span> 
+        <span class="txt">Min</span> 
+        <span class="digit" id="sec"> 
+            00</span> 
+        <span class="txt">Sec</span> 
+        <span class="digit" id="count"> 
+            00</span> 
+    </div> 
+    <div id="buttons"> 
+        <button class="btn" id="start"> 
+            Start</button> 
+        <button class="btn" id="stop"> 
+            Stop</button> 
+        <button class="btn" id="reset"> 
+            Reset</button> 
+    </div> 
+</div>
+  <div class = "card2">
+    <h1>Guide</h1>
+    <li>If you see aliens call the space police immediately.</li>
+    <li>Never remove your oxygen mask.</li>
+    <li>Neptune is big planet - don't get lost.</li>
+    <li>Don't keep anything that is blue in color as it will camoflauge and make you disappear. </li>
+    <li>Time is slow so you can enjoy your time there.</li>
+</div>
 </body>
+
+    <script src="script.js"></script>
+    <script src="stopwatch.js"></script>
   <!-- Include this script in your existing JavaScript code -->
   <script>
     function updateCurrentTime() {

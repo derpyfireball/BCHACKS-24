@@ -232,6 +232,18 @@ body {
     justify-content: center;
   }
   
+  .comparision{
+    position: relative;
+    width: 25%;
+    height: 25%;
+    display: flex;
+    padding: 20px 10px;
+    background: #212121;
+    box-shadow: 15px 15px 30px rgb(25, 25, 25),
+                -15px -15px 30px rgb(60, 60, 60);
+    border-radius: 30px;
+    bottom: 60px;
+  }
   .card {
     position: fixed;
     width: 25%;
@@ -253,8 +265,9 @@ body {
     box-shadow: 15px 15px 30px rgb(25, 25, 25),
                 -15px -15px 30px rgb(60, 60, 60);
     border-radius: 30px;
-    position: relative;
-    left: 820px;
+    position: fixed;
+    left: 890px;
+    top: 130px;
 
    }
 
@@ -267,6 +280,9 @@ body {
   .card2 li{
     size:10px;
     margin-bottom: 60px;
+    text-align:  center;
+    padding: 0px 30px;
+    font-size: 20px;
   }
   
   .image{

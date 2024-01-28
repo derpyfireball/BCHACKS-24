@@ -338,7 +338,7 @@ body {
   .temp {
     position: absolute;
     top: 20px;
-    left: 235px;
+    left: 190px;
     font-size: 4em;
     color: white;
   }
@@ -440,4 +440,28 @@ h1 {
 #reset { 
     background-color: #ffffff; 
     color: #000;
+}
+.distance{
+    width: 27.8%;
+    height: 40%;
+    background: #212121;
+    box-shadow: 15px 15px 30px rgb(25, 25, 25),
+                -15px -15px 30px rgb(60, 60, 60);
+    border-radius: 30px;
+    position: absolute;
+    top:130px;
+    left: 50px;
+}
+.compareimage{
+    position: absolute;
+    top:90px;
+    left:40px;
+
+}
+.distance text{
+    position: absolute;
+    top: 40px;
+    right: 30px;
+    text-align: center;
+    font-size: 20px;
 }

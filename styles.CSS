@@ -192,8 +192,17 @@ body {
     
 }
 
+/* Additional styling for other planets' widgets */
+#venusWidget {
+    /* Customize styles for Venus widget */
+}
+
+#earthWidget {
+    /* Customize styles for Earth widget */
+}
+
+/* Add widgets for other planets as needed */
 .cardContainer {
-    width: fit-content;
     position: relative;
     display: flex;
     align-items: center;
@@ -201,104 +210,30 @@ body {
   }
   
   .card {
-    right: 10px;
+    position: fixed;
     width: 25%;
-    height: 1%;
-    position: fixed;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px;
+    height: 25%;
+    display: inline-grid;
+    justify-content: space-even;
+    padding: 20px 10px;
     background: #212121;
     box-shadow: 15px 15px 30px rgb(25, 25, 25),
                 -15px -15px 30px rgb(60, 60, 60);
     border-radius: 30px;
-    border: px solid rgba(255, 255, 255, 0.089);
-  }
-
-    /* Style for buttons */
-button1 {
-  background-color: #ffffff;
-  color: #000000;
-  position: fixed;
-  bottom:80px;
-  left:480px;
-  border: none;
-  padding: 10px 20px;
-  margin: 5px;
-  font-size: 16px;
-  cursor: pointer;
-  border-radius: 5px;
-  transition: background-color 0.3s;
-}
-
-button2 {
-    background-color: #ffffff;
-    color: #000000;
-    position: fixed;
-    bottom:80px;
-    left:680px;
-    border: none;
-    padding: 10px 20px;
-    margin: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-  }
-  
-
-/* Hover effect for buttons */
-button1:hover {
-  background-color: #454141;
-  color: #000000;
-}
-button2:hover {
-    background-color: #454141;
-    color: #000000;
-  }
-
-/* Style for modal */
-.modal {
-  display: none;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 1;
-}
-
-.modal-content {
-  background-color: #fefefe;
-  padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-/* Style for close button in modal */
-.close {
-  color: #aaa;
-  float: right;
-  font-size: 20px;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.close:hover {
-  color: #555;
-}
+    left: 50px;
+    bottom:60px;
 
 
-  .card2 {
+   }
+   .card2{
     width: 400px;
-    height: 500px;
+    height: 610px;
     background: #212121;
     box-shadow: 15px 15px 30px rgb(25, 25, 25),
                 -15px -15px 30px rgb(60, 60, 60);
     border-radius: 30px;
-    margin-top: 30px;
-    margin-left: 840px;
+    position: absolute;
+    right: 40px;
 
    }
 
@@ -313,27 +248,44 @@ button2:hover {
     margin-bottom: 60px;
   }
   
-  .planet {
+  .image{
+    position: absolute;
+    left: 20px;
+    top: 70px
+  }
+  .city {
     font-weight: 700;
-    font-size: 7em;
+    font-size: 1.3em;
     letter-spacing: 1.2px;
     color: white;
+    position: absolute;
+    top: 30px;
+    left:60px;
   }
   
   .weather {
-    font-weight: 500;
-    font-size: 0.7em;
+    position: absolute;
+    top: 30px;
+    left: 210px;
+    font-weight: 600;
+    font-size: 1.2em;
     letter-spacing: 1.2px;
     color: rgb(197, 197, 197);
   }
   
   .temp {
-    font-size: 1.8em;
+    position: absolute;
+    top: 80px;
+    left: 235px;
+    font-size: 4em;
     color: white;
   }
   
   .minmaxContainer {
-    width: 100%;
+    position: absolute;
+    top: 180px;
+    left: 100px;
+    width: 90%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -345,7 +297,7 @@ button2:hover {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    justify-content: center;
+    justify-content:space-evenly;
     padding: 0px 20px;
     gap: 4px;
   }
@@ -357,15 +309,16 @@ button2:hover {
   
   .maxHeading,
   .minHeading {
-    font-size: 0.7em;
+    font-size: 1em;
     font-weight: 600;
-    color: rgb(255, 255, 255);
+    color: white;
   }
   
   .maxTemp,
   .minTemp {
-    font-size: 0.6em;
+    font-size: 0.9em;
     font-weight: 500;
-    color: rgb(237, 237, 237);
+    color: rgb(197, 197, 197);
   }
-
+  
+  

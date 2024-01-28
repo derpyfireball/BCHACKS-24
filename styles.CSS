@@ -75,11 +75,11 @@ p {
     left: 10px; /* 10px from the left */
     padding: 10px 20px;
     font-size: 16px;
-    background-color: #fff; /* Set background color to white */
-    color: #000; /* Set text color to black */
+    background-color: #ffffff; /* Set background color to white */
+    color: #000000; /* Set text color to black */
     text-decoration: none;
     border-radius: 5px;
-    background: #212121;
+    background: #ffffff;
     box-shadow: 15px 15px 30px rgb(25, 25, 25),
                 -15px -15px 30px rgb(60, 60, 60);
     border-radius: 30px;

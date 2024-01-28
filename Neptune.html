@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Neptune Page</title>
+    <title>Neptune</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -12,6 +12,42 @@
 
     <!-- Add content specific to Mercury -->
     <a href="index.html" class="home-button">Home</a>
-
+    <!-- Add this HTML code where you want the time widget to appear -->
+<div class="time-widget">
+    <h2>Current Time:</h2>
+    <p id="currentTime">Loading...</p>
+  </div>
 </body>
+  <!-- Include this script in your existing JavaScript code -->
+  <script>
+    function updateCurrentTime() {
+      // Get the current time
+      const currentTime = new Date().toLocaleString('en-US', { timeZone: 'Asia/Kolkata' });
+  
+      // Display the current time in the widget
+      document.getElementById('currentTime').innerText = `${currentTime}`;
+    }
+  
+    // Call the function to update the time
+    updateCurrentTime();
+  
+    // Update the time every second
+    setInterval(updateCurrentTime, 1000);
+    <!-- Include this script in your existing JavaScript code -->
+  function updateCurrentTime() {
+    // Get the current time without the date
+    const currentTime = new Date().toLocaleTimeString('en-US', { timeZone: 'Asia/Kolkata' });
+
+    // Display the current time in the widget
+    document.getElementById('currentTime').innerText = `${currentTime}`;
+  }
+
+  // Call the function to update the time
+  updateCurrentTime();
+
+  // Update the time every second
+  setInterval(updateCurrentTime, 1000);
+
+  </script>
+
 </html>

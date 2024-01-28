@@ -272,17 +272,6 @@ body {
     color: rgb(237, 237, 237);
   }
 
-  
-/* Additional styling for other planets' widgets */
-#venusWidget {
-    /* Customize styles for Venus widget */
-}
-
-#earthWidget {
-    /* Customize styles for Earth widget */
-}
-
-/* Add widgets for other planets as needed */
 .card {
     width: 300px;
     height: 600px;

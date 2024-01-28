@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Uranus Page</title>
+    <title>Uranus</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -14,4 +14,30 @@
     <a href="index.html" class="home-button">Home</a>
 
 </body>
+<!-- Add this HTML code where you want the Uranus time widget to appear -->
+<div class="time-widget">
+    <h2>Current Time:</h2>
+    <p id="uranusTime">Loading...</p>
+  </div>
+  
+  <script>
+    function updateUranusTime() {
+      // Get the current time in Dubai
+      const dubaiTime = new Date().toLocaleTimeString('en-US', { timeZone: 'Asia/Dubai' });
+  
+      // Display the hypothetical time in Uranus (assuming a fixed time difference of 6 hours)
+      const uranusTimeDifference = 6; // You need to adjust this based on your hypothetical time
+      const uranusTime = new Date(new Date().getTime() + uranusTimeDifference * 60 * 60 * 1000).toLocaleTimeString();
+  
+      // Display the Uranus time in the widget
+      document.getElementById('uranusTime').innerText = ` ${uranusTime}`;
+    }
+  
+    // Call the function to update the times
+    updateUranusTime();
+  
+    // Update the times every second
+    setInterval(updateUranusTime, 1000);
+  </script>
+  
 </html>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mercury Page</title>
+    <title>Mercury</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -15,4 +15,27 @@
     <a href="index.html" class="home-button">Home</a>
 
 </body>
+<div class="time-widget">
+    <h2>Current Time:</h2>
+    <p id="mercuryTime">Loading...</p>
+  </div>
+  
+  <!-- Include this script in your existing JavaScript code -->
+  <script>
+    function updateMercuryTime() {
+      // Display the Mercury time (assuming a fixed time difference of 2 hours)
+      const mercuryTimeDifference = 2; // You need to adjust this based on the actual time difference
+      const mercuryTime = new Date(new Date().getTime() + mercuryTimeDifference * 60 * 60 * 1000).toLocaleTimeString();
+  
+      // Display the Mercury time in the widget
+      document.getElementById('mercuryTime').innerText = `${mercuryTime}`;
+    }
+  
+    // Call the function to update the Mercury time
+    updateMercuryTime();
+  
+    // Update the Mercury time every second
+    setInterval(updateMercuryTime, 1000);
+  </script>
+  
 </html>

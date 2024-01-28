@@ -317,7 +317,7 @@ body {
   }
   .city {
     font-weight: 700;
-    font-size: 1.3em;
+    font-size: 1.2em;
     letter-spacing: 1.2px;
     color: white;
     position: absolute;
@@ -346,7 +346,7 @@ body {
   .minmaxContainer {
     position: absolute;
     top: 165px;
-    left: 85px;
+    left: 70px;
     width: 100%;
     display: flex;
     align-items: center;

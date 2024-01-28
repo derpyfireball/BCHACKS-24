@@ -1,140 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jupiter</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="Pluto-FACTS.css">
-    <title>Pluto Page</title>
 </head>
 <body>
 
-    <h1 class="planet-title">Welcome to Jupiter!</h1>
+    <h1>Welcome to Jupiter!</h1>
 
-    <div class="weather-widget" id="plutoWidget">
-        <!-- Weather widget content for Pluto -->
-        <div class="weather-info">
-            <h2>Weather:</h2>
-            <p id="weatherInfo">Actual weather</p>
-            <h2>Temperature:</h2>
-            <p id="temperatureInfo">Actual weather</p>
+    <!-- Add content specific to Mercury -->
+    <a href="index.html" class="home-button">Home</a>
 
-        </div>
-    </div>
-
-    <!-- New widget for displaying time -->
-    <div class="time-widget" id="timeWidget">
-        <h2>Current Time:</h2>
-        <p id="currentTime">Loading...</p>
-    </div>
-
-    
-    <!-- Add the fun fact container -->
-    <div id="fun-fact-container"></div>
-
-    <!-- Your content for the Pluto page goes here -->
-
-    <div class="home-button">
-        <a href="index.html">Home</a>
-    </div>
-    <div class="cardContainer">
-        <div class="card">
-          <p class="planet">Jupiter</p>
-          <p class="weather">PARTILY CLOUDY</p>
-          <svg
-            class="weather"
-            version="1.1"
-            id="Layer_1"
-            x="0px"
-            y="0px"
-            width="50px"
-            height="50px"
-            viewBox="0 0 100 100"
-            xml:space="preserve"
-          >
-            <image
-              id="image0"
-              width="100"
-              height="100"
-              x="0"
-              y="0"
-              href="https://upload.wikimedia.org/wikipedia/commons/e/e1/Jupiter_%28transparent%29.png"
-            ></image>
-            
-          </svg>
-          <p class="temp">-4°</p>
-          <div class="minmaxContainer">
-            <div class="min">
-              <p class="minHeading">Min</p>
-              <p class="minTemp">-47°</p>
-            </div>
-            <div class="max">
-              <p class="maxHeading">Max</p>
-              <p class="maxTemp">-2°</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-    <script src="script.js"></script>
-    <script>
-        // Array of fun facts
-        const funFacts = [
-            "Pluto is not considered a planet anymore.",
-            "Pluto is the only dwarf planet with a moon named Charon.",
-            // Add more fun facts as needed
-        ];
-
-        // Function to update the fun fact with custom fade-in and fade-out
-        function updateFunFact() {
-            // ... (rest of the script)
-        }
-
-        // Call the function to start the fun fact loop
-        updateFunFact();
-    </script>
-
-    <script>
-        // Function to update the current time
-        function updateCurrentTime() {
-            const currentTimeElement = document.getElementById('currentTime');
-            const currentTime = new Date().toLocaleTimeString();
-            currentTimeElement.innerHTML = `<strong>${currentTime}</strong>`;
-        }
- // Function to generate random weather information
- function generateRandomWeather() {
-        const weatherConditions = ['Cold and mysterious', 'Windy and desolate', 'Occasional ice storms', 'Sparse atmosphere'];
-        const temperatureC = parseFloat((Math.random() * (10 - (-50)) + (-50)).toFixed(1));
-        const temperatureF = parseFloat(((temperatureC * 9/5) + 32).toFixed(1));
-        const temperatureK = parseFloat((temperatureC + 273.15).toFixed(1));
-
-        const randomCondition = weatherConditions[Math.floor(Math.random() * weatherConditions.length)];
-
-        return `${randomCondition}, ${temperatureC}°C / ${temperatureF}°F / ${temperatureK}K`;
-    }
-
-    // Update weather information every 3 minutes
-    function updateWeather() {
-        const weatherInfoElement = document.getElementById('weatherInfo');
-        const temperatureInfoElement = document.getElementById('temperatureInfo');
-
-        // Set initial values
-        const initialWeather = generateRandomWeather();
-        weatherInfoElement.innerHTML = `${initialWeather}`;
-
-        // Update weather every 3 minutes
-        setInterval(() => {
-            const randomWeather = generateRandomWeather();
-            weatherInfoElement.innerHTML = `${randomWeather}`;
-        }, 180000); // 3 minutes in milliseconds
-    }
-
-    setInterval(updateCurrentTime, 1000);
-
-    window.onload = function() {
-        updateWeather();
-        updateCurrentTime();
-    };
-    </script>
 </body>
+
+<!-- Add this HTML code where you want the Jupiter time widget to appear -->
+<div class="time-widget">
+  <h2>Current Time:</h2>
+  <p id="jupiterTime">Loading...</p>
+</div>
+
+
+<script>
+  function updateJupiterTime() {
+    // Display the Jupiter time (assuming a fixed time difference of 5 hours)
+    const jupiterTimeDifference = 5; // You need to adjust this based on the actual time difference
+    const jupiterTime = new Date(new Date().getTime() + jupiterTimeDifference * 60 * 60 * 1000).toLocaleTimeString();
+
+    // Display the Jupiter time in the widget
+    document.getElementById('jupiterTime').innerText = `${jupiterTime}`;
+  }
+
+  // Call the function to update the Jupiter time
+  updateJupiterTime();
+
+  // Update the Jupiter time every second
+  setInterval(updateJupiterTime, 1000);
+</script>
+
 </html>

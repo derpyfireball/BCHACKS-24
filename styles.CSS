@@ -192,14 +192,6 @@ body {
     
 }
 
-/* Additional styling for other planets' widgets */
-#venusWidget {
-    /* Customize styles for Venus widget */
-}
-
-#earthWidget {
-    /* Customize styles for Earth widget */
-}
 
 /* Add widgets for other planets as needed */
 .cardContainer {
@@ -321,4 +313,34 @@ body {
     color: rgb(197, 197, 197);
   }
   
-  
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    width: 25%;
+    height: 25%;
+    background-color: #fff;
+}
+
+h1{
+    color: #000;
+    text-align: center;
+}
+
+.dig{
+    font-size: 50px;
+    color: #000;
+}
+
+.text{
+    font-size: 30px;
+    color: #000;
+}
+
+button{
+    width: 50px;
+    padding: 10px 15px;
+    margin: 0px 20px;
+    
+}

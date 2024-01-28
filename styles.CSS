@@ -224,7 +224,30 @@ body {
     font-family: 'Bebas Neue', sans-serif;
     
 }
+.stats{
+    width: 27.8%;
+    height: 40%;
+    background: #212121;
+    box-shadow: 15px 15px 30px rgb(25, 25, 25),
+                -15px -15px 30px rgb(60, 60, 60);
+    border-radius: 30px;
+    position: absolute;
+    top:130px;
+    left: 450px;
+}
+.stats h1{
+    color:#ffffff;
+    size: 50px;
+    padding: 10px 10px;
+  }
 
+  .stats li{
+    size:10px;
+    margin-bottom: 14px;
+    text-align:  center;
+    padding: 0px 30px;
+    font-size: 18px;
+  }
 
 /* Add widgets for other planets as needed */
 .cardContainer {

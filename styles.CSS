@@ -222,8 +222,18 @@ body {
     border-radius: 30px;
     left: 50px;
     bottom:60px;
-    margin-top: 30px;
-    margin-left: 840px;
+
+
+   }
+   .card2{
+    width: 400px;
+    height: 610px;
+    background: #212121;
+    box-shadow: 15px 15px 30px rgb(25, 25, 25),
+                -15px -15px 30px rgb(60, 60, 60);
+    border-radius: 30px;
+    position: absolute;
+    right: 40px;
 
    }
 

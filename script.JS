@@ -47,3 +47,4 @@ function navigateToPlanet() {
         window.location.href = selectedOption + ".html";
     }
 }
+

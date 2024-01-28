@@ -14,8 +14,8 @@
 </head>
 <body style="background-color: #212121;">
   
-
     <h1 class="planet-title">Welcome to Pluto!</h1>
+
 
         <!-- Add the fun fact container -->
         <div id="fun-fact-container"></div>
@@ -82,24 +82,30 @@
         <h2>Current Time:</h2>
         <p id="currentTime">Loading...</p>
     </div>
-
-<div class = "container">
-    <h1>Stopwatch</h1>
-    <div id = "time">
-        <span class = "dig" id = "hr">00</span>
-        <span class = "text">hr</span>
-        <span class = "dig" id = "min">00</span>
-        <span class = "text">min</span>
-        <span class = "dig" id = "sec">00</span>
-        <span class = "text">sec</span>
-        <span class = "dig" id = "cnt">00</span>
-    </div>
-    <div id="buttons">
-        <button class="button" id = "start">Start</button>
-        <button class="button" id="stop">Stop</button>
-        <button class="Reset" id="reset">Reset</button>
-    </div>
+    <div class ="containerx">
+    <div id="time" class=> 
+        <span class="digit" id="hr"> 
+            00</span> 
+        <span class="txt">Hr</span> 
+        <span class="digit" id="min"> 
+            00</span> 
+        <span class="txt">Min</span> 
+        <span class="digit" id="sec"> 
+            00</span> 
+        <span class="txt">Sec</span> 
+        <span class="digit" id="count"> 
+            00</span> 
+    </div> 
+    <div id="buttons"> 
+        <button class="btn" id="start"> 
+            Start</button> 
+        <button class="btn" id="stop"> 
+            Stop</button> 
+        <button class="btn" id="reset"> 
+            Reset</button> 
+    </div> 
 </div>
+</div> 
 
     <!-- Your content for the Pluto page goes here -->
 
@@ -143,9 +149,11 @@
         <li>Don't keep anything bright as it is reflective and dangerous with the planet's atmosphere.</li>
         <li>Never remove your oxygen mask.</li>
         <li>Time is not the same so ignore it as much as you can.</li>
+    </div>
 
 
     <script src="script.js"></script>
+    <script src="stopwatch.js"></script>
 
     <script>
         let timerInterval;

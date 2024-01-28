@@ -5,6 +5,13 @@ main{
                 font-family: 'Bebas Neue', sans-serif;
     
 }
+#myVideo {
+    position: fixed;
+    right: -5%;
+    bottom: -25px;
+    width: 110%;
+    height: 110%;
+  }
 .intro{
     background-color: #212121;
     color: #ffffff;

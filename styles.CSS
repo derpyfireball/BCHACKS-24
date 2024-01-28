@@ -271,23 +271,7 @@ body {
     font-weight: 500;
     color: rgb(237, 237, 237);
   }
-  
-  .cardContainer::before {
-    width: 100px;
-    height: 100px;
-    content: "";
-    position: absolute;
-    background-color: rgb(144, 161, 255);
-    z-index: -1;
-    border-radius: 50%;
-    left: 100px;
-    top: 50px;
-    transition: all 1s;
-  }
-  
-  .cardContainer:hover::before {
-    transform: translate(-50px, 50px);
-  }
+
   
 /* Additional styling for other planets' widgets */
 #venusWidget {

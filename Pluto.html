@@ -17,6 +17,62 @@
 
     <h1 class="planet-title">Welcome to Pluto!</h1>
 
+        <!-- Add the fun fact container -->
+        <div id="fun-fact-container"></div>
+
+        <script>
+            // Array of fun facts
+            const funFacts = [
+                "Pluto is not considered a planet anymore.",
+                "Pluto is the only dwarf planet with a moon named Charon.",
+                // Add more fun facts as needed
+            ];
+    
+            // Function to update the fun fact with fade-in and fade-out
+            function updateFunFact() {
+                const funFactContainer = document.getElementById('fun-fact-container');
+                let index = 0;
+    
+                function fadeIn() {
+                    let opacity = 0;
+                    const intervalId = setInterval(() => {
+                        funFactContainer.style.opacity = opacity;
+                        opacity += 0.1;
+    
+                        if (opacity > 1) {
+                            clearInterval(intervalId);
+                            setTimeout(fadeOut, 2000); // Adjust the delay before fade-out (milliseconds)
+                        }
+                    }, 100);
+                }
+    
+                function fadeOut() {
+                    let opacity = 1;
+                    const intervalId = setInterval(() => {
+                        funFactContainer.style.opacity = opacity;
+                        opacity -= 0.1;
+    
+                        if (opacity < 0) {
+                            clearInterval(intervalId);
+                            updateNextFunFact();
+                        }
+                    }, 100);
+                }
+    
+                function updateNextFunFact() {
+                    index = (index + 1) % funFacts.length;
+                    funFactContainer.textContent = funFacts[index];
+                    fadeIn();
+                }
+    
+                // Initial display
+                funFactContainer.textContent = funFacts[index];
+                fadeIn();
+            }
+    
+            // Call the function to start the fun fact loop
+            updateFunFact();
+        </script>
     
     </div>
     <!-- New widget for displaying time -->

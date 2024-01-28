@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jupiter Page</title>
+    <title>Jupiter</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -14,4 +14,29 @@
     <a href="index.html" class="home-button">Home</a>
 
 </body>
+
+<!-- Add this HTML code where you want the Jupiter time widget to appear -->
+<div class="time-widget">
+  <h2>Current Time:</h2>
+  <p id="jupiterTime">Loading...</p>
+</div>
+
+
+<script>
+  function updateJupiterTime() {
+    // Display the Jupiter time (assuming a fixed time difference of 5 hours)
+    const jupiterTimeDifference = 5; // You need to adjust this based on the actual time difference
+    const jupiterTime = new Date(new Date().getTime() + jupiterTimeDifference * 60 * 60 * 1000).toLocaleTimeString();
+
+    // Display the Jupiter time in the widget
+    document.getElementById('jupiterTime').innerText = `${jupiterTime}`;
+  }
+
+  // Call the function to update the Jupiter time
+  updateJupiterTime();
+
+  // Update the Jupiter time every second
+  setInterval(updateJupiterTime, 1000);
+</script>
+
 </html>

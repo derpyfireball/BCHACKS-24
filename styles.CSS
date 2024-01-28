@@ -1,23 +1,26 @@
 body {
-    font-family: Arial, sans-serif;
     text-align: center;
     margin: 50px;
-    background-color: #000; /* Set background color to black */
+    background-color: #ff0000; /* Set background color to black */
     color: #fff;
+    font-family: 'Bebas Neue', sans-serif;
 }
 
 h1 {
     color: #fff;
     margin-bottom: 20px;
+    font-family: 'Bebas Neue', sans-serif;
 }
 
 p {
     color: #fff;
+    font-family: 'Bebas Neue', sans-serif;
 }
 
 .dropdown {
     position: relative;
     display: inline-block;
+    font-family: 'Bebas Neue', sans-serif;
 }
 
 /* Style the dropdown label and select */
@@ -28,6 +31,7 @@ p {
     font-size: 16px;
     border: none;
     cursor: pointer;
+    font-family: 'Bebas Neue', sans-serif;
 }
 
 /* Style the dropdown content (hidden by default) */
@@ -39,6 +43,8 @@ p {
     z-index: 1;
     width: 100%; /* Match the width of the button */
     top: 40px; /* Adjust the top spacing */
+    font-family: 'Bebas Neue', sans-serif;
+    top: 28px; /* Adjust the top spacing */
 }
 
 /* Style the dropdown options */
@@ -47,16 +53,19 @@ p {
     padding: 12px 16px;
     display: block;
     text-decoration: none;
+    font-family: 'Bebas Neue', sans-serif;
 }
 
 /* Change color on hover */
 .dropdown-content a:hover {
     background-color: #ddd;
+    font-family: 'Bebas Neue', sans-serif;
 }
 
 /* Show the dropdown content on hover */
 .dropdown:hover .dropdown-content {
     display: block;
+    font-family: 'Bebas Neue', sans-serif;
 }
 
 /* Style for home button */
@@ -66,10 +75,15 @@ p {
     left: 10px; /* 10px from the left */
     padding: 10px 20px;
     font-size: 16px;
-    background-color: #fff; /* Set background color to white */
-    color: #000; /* Set text color to black */
+    background-color: #ffffff; /* Set background color to white */
+    color: #000000; /* Set text color to black */
     text-decoration: none;
     border-radius: 5px;
+    background: #ffffff;
+    box-shadow: 15px 15px 30px rgb(25, 25, 25),
+                -15px -15px 30px rgb(60, 60, 60);
+    border-radius: 30px;
+    font-family: 'Bebas Neue', sans-serif;
 }
 
 /* Hover effect for home button */
@@ -81,14 +95,19 @@ p {
 .time-widget {
     position: fixed;
     bottom: 60px;
-    left: 700px;
+    left: 450px;
     background-color: #00008B; /* Dark blue color */
     color: #ffffff;
-    padding: 10px;
+    padding: 20px;
     border-radius: 5px;
     font-size: 20px;
     width: 25%; /* Cover less than 1/4th of the page */
     height: 25%;
+    background: #212121;
+    box-shadow: 15px 15px 30px rgb(25, 25, 25),
+                -15px -15px 30px rgb(60, 60, 60);
+    border-radius: 30px;
+    font-family: 'Bebas Neue', sans-serif;
 }
 
 /* Style for the time information */
@@ -102,7 +121,8 @@ p {
 .time-widget p {
     margin-top: 0; /* Remove default margin for p */
     margin-bottom: 10px; /* Adjust margin as needed */
-    font-size: 30px; /* Increase font size for paragraphs */
+    font-size: 20px; /* Increase font size for paragraphs */
+    font-family: 'Bebas Neue', sans-serif;
 }
 
 /* Weather widget styling */
@@ -110,53 +130,66 @@ p {
     position: fixed;
     bottom: 60px;
     left: 50px;
-    background-color: #f26c18;
-    color: #000;
-    padding: 10px;
+    background-color: #212121;
+    color: #ffffff;
+    padding: 20px;
     border-radius: 5px;
     font-size: 20px;
     width: 25%; /* Cover less than 1/4th of the page */
     height: 25%;
+    background: #212121;
+    box-shadow: 15px 15px 30px rgb(25, 25, 25),
+                -15px -15px 30px rgb(60, 60, 60);
+    border-radius: 30px;
+    font-family: 'Bebas Neue', sans-serif;
 }
 
 /* Style for the weather information */
 .weather-info {
     max-height: 100%; /* Allow the content to take full height if needed */
     overflow: hidden; /* Hide overflow to prevent scrolling */
+    font-family: 'Bebas Neue', sans-serif;
 }
 
 /* Style for headings */
 .weather-info h2 {
     margin-top: 0; /* Remove default margin for h2 */
     margin-bottom: 5px; /* Adjust margin as needed */
-    font-size: 50px; /* Increase font size for headings */
+    font-size: 30px; /* Increase font size for headings */
+    font-family: 'Bebas Neue', sans-serif;
 }
 
 /* Style for paragraphs */
 .weather-info p {
-    margin-top: 0; /* Remove default margin for p */
-    margin-bottom: 10px; /* Adjust margin as needed */
-    font-size: 30px; /* Increase font size for paragraphs */
+    margin-top: 0px; /* Remove default margin for p */
+    margin-bottom: 50px; /* Adjust margin as needed */
+    font-size: 20px; /* Increase font size for paragraphs */
+    font-family: 'Bebas Neue', sans-serif;
 }
 
 /* Add this style to adjust the position of the planet title */
 .planet-title {
     margin-top: 50px; /* Adjust the margin-top value as needed */
+    color:  #ffffff;
+    font-family: 'Bebas Neue', sans-serif;
 }
 
 /* Add this style to add space between weather and temperature */
 .weather-widget p {
     margin-bottom: 20px; /* Adjust the margin as needed */
+    font-family: 'Bebas Neue', sans-serif;
 }
 
 /* Add any additional styles as needed */
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Bebas Neue", "sans-serif";
     text-align: center;
     margin: 50px;
     background-color: #000;
-    color: #fff;
+    color: #ffffff;
+    font-family: 'Bebas Neue', sans-serif;
+    
 }
 
 /* Additional styling for other planets' widgets */
@@ -169,3 +202,123 @@ body {
 }
 
 /* Add widgets for other planets as needed */
+.cardContainer {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .card {
+    position: fixed;
+    width: 25%;
+    height: 25%;
+    display: inline-grid;
+    justify-content: space-even;
+    padding: 20px 10px;
+    background: #212121;
+    box-shadow: 15px 15px 30px rgb(25, 25, 25),
+                -15px -15px 30px rgb(60, 60, 60);
+    border-radius: 30px;
+    left: 50px;
+    bottom:60px;
+
+
+   }
+   .card2{
+    width: 400px;
+    height: 610px;
+    background: #212121;
+    box-shadow: 15px 15px 30px rgb(25, 25, 25),
+                -15px -15px 30px rgb(60, 60, 60);
+    border-radius: 30px;
+    position: absolute;
+    right: 40px;
+
+   }
+
+  .card2 h1{
+    color:#ffffff;
+    size: 50px;
+    padding: 10px 20px;
+  }
+
+  .card2 li{
+    size:10px;
+    margin-bottom: 60px;
+  }
+  
+  .image{
+    position: absolute;
+    left: 20px;
+    top: 70px
+  }
+  .city {
+    font-weight: 700;
+    font-size: 1.3em;
+    letter-spacing: 1.2px;
+    color: white;
+    position: absolute;
+    top: 30px;
+    left:60px;
+  }
+  
+  .weather {
+    position: absolute;
+    top: 30px;
+    left: 210px;
+    font-weight: 600;
+    font-size: 1.2em;
+    letter-spacing: 1.2px;
+    color: rgb(197, 197, 197);
+  }
+  
+  .temp {
+    position: absolute;
+    top: 80px;
+    left: 235px;
+    font-size: 4em;
+    color: white;
+  }
+  
+  .minmaxContainer {
+    position: absolute;
+    top: 180px;
+    left: 100px;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .min,
+  .max {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content:space-evenly;
+    padding: 0px 20px;
+    gap: 4px;
+  }
+  
+  .max {
+    align-items: flex-start;
+    border-left: 2px solid white;
+  }
+  
+  .maxHeading,
+  .minHeading {
+    font-size: 1em;
+    font-weight: 600;
+    color: white;
+  }
+  
+  .maxTemp,
+  .minTemp {
+    font-size: 0.9em;
+    font-weight: 500;
+    color: rgb(197, 197, 197);
+  }
+  
+  

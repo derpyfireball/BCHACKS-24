@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Earth Page</title>
+    <title>Earth</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -14,4 +14,27 @@
     <a href="index.html" class="home-button">Home</a>
 
 </body>
+<!-- Add this HTML code where you want the Earth time widget to appear -->
+<div class="time-widget">
+  <h2>Current Time in Earth (London):</h2>
+  <p id="earthTime">Loading...</p>
+</div>
+
+<!-- Include this script in your existing JavaScript code -->
+<script>
+  function updateEarthTime() {
+    // Get the current time in London
+    const londonTime = new Date().toLocaleTimeString('en-US', { timeZone: 'Europe/London' });
+
+    // Display the Earth time in the widget
+    document.getElementById('earthTime').innerText = ` ${londonTime}`;
+  }
+
+  // Call the function to update the Earth time
+  updateEarthTime();
+
+  // Update the Earth time every second
+  setInterval(updateEarthTime, 1000);
+</script>
+
 </html>

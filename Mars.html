@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mars Page</title>
+    <title>Mars</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -12,6 +12,28 @@
 
     <!-- Add content specific to Mercury -->
     <a href="index.html" class="home-button">Home</a>
-
 </body>
+<!-- Add this HTML code where you want the Mars time widget to appear -->
+<div class="time-widget">
+    <h2>Current Time:</h2>
+    <p id="marsTime">Loading...</p>
+  </div>
+
+<script>
+    function updateMarsTime() {
+      // Display the Mars time (assuming a fixed time difference of 40 minutes)
+      const marsTimeDifference = 40 / 60; // You need to adjust this based on the actual time difference
+      const marsTime = new Date(new Date().getTime() + marsTimeDifference * 60 * 60 * 1000).toLocaleTimeString();
+  
+      // Display the Mars time
+      document.getElementById('marsTime').innerText = `${marsTime}`;
+    }
+  
+    // Call the function to update the Mars time
+    updateMarsTime();
+  
+    // Update the Mars time every second
+    setInterval(updateMarsTime, 1000);
+  </script>
+  
 </html>

@@ -10,11 +10,11 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
         </style>
-    <title>Pluto Page</title>
+    <title>Mercury Page</title>
 </head>
 <body style="background-color: #212121;">
   
-    <h1 class="planet-title">Welcome to Pluto!</h1>
+    <h1 class="planet-title">Welcome to Mercury!</h1>
 
 
         <!-- Add the fun fact container -->
@@ -150,11 +150,11 @@
     </div>
     <div class="stats">
         <h1>Statistics</h1>
-        <li>You are 7.5 billion killometers away from earth.</li>
-        <li>Your planet is of icy state</li>
-        <li>You are located in Kuiper Belt.</li>
-        <li>You have 5 moons</li>
-        <li>The radius of your planet 1188.3 kms..</li>
+        <li>You are 77 million killometers away from earth.</li>
+        <li>Your planet is of solid state</li>
+        <li>You are located in the smallest planet of the solar system.</li>
+        <li>You have 0 moons.</li>
+        <li>The radius of your planet 2439.7 kms.</li>
     </div>
     <div class="distance">
         <img class="compareimage" width="300" src="pluto.jpeg">
@@ -172,7 +172,7 @@
         // Function to update the current time
         function updateCurrentTime() {
             const currentTimeElement = document.getElementById('currentTime');
-            const currentTime = new Date().toLocaleTimeString();
+            const currentTime = new Date().toLocaleTimeString('en-US', { timeZone: 'Asia/Dubai' });
             currentTimeElement.innerHTML = `<strong>${currentTime}</strong>`;
         }
 

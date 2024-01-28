@@ -10,11 +10,11 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
         </style>
-    <title>Pluto Page</title>
+    <title>Uranus Page</title>
 </head>
 <body style="background-color: #212121;">
   
-    <h1 class="planet-title">Welcome to Pluto!</h1>
+    <h1 class="planet-title">Welcome to Uranus!</h1>
 
 
         <!-- Add the fun fact container -->
@@ -172,7 +172,7 @@
         // Function to update the current time
         function updateCurrentTime() {
             const currentTimeElement = document.getElementById('currentTime');
-            const currentTime = new Date().toLocaleTimeString();
+            const currentTime = new Date().toLocaleTimeString('en-US', { timeZone: 'Asia/Seoul' });
             currentTimeElement.innerHTML = `<strong>${currentTime}</strong>`;
         }
 

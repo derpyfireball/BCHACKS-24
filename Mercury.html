@@ -8,7 +8,7 @@
 </head>
 <body>
 
-    <h1>Welcome to Mercury!</h1>
+    <h1 class="planet-title">Welcome to Mercury!</h1>
 
     <!-- Add content specific to Mercury -->
 
@@ -19,7 +19,40 @@
     <h2>Current Time:</h2>
     <p id="mercuryTime">Loading...</p>
   </div>
-  
+  <div class ="container">
+    <div id="time" class=> 
+        <span class="digit" id="hr"> 
+            00</span> 
+        <span class="txt">Hr</span> 
+        <span class="digit" id="min"> 
+            00</span> 
+        <span class="txt">Min</span> 
+        <span class="digit" id="sec"> 
+            00</span> 
+        <span class="txt">Sec</span> 
+        <span class="digit" id="count"> 
+            00</span> 
+    </div> 
+    <div id="buttons"> 
+        <button class="btn" id="start"> 
+            Start</button> 
+        <button class="btn" id="stop"> 
+            Stop</button> 
+        <button class="btn" id="reset"> 
+            Reset</button> 
+    </div> 
+</div>
+  <div class = "card2">
+    <h1>Guide</h1>
+    <li>If you see aliens call the space police immediately.</li>
+    <li>Never remove your oxygen mask or your space suit.</li>
+    <li>Mercury is the closest planet to the sun - don't melt.</li>
+    <li>Don't keep anything outside your space suit - it will melt. </li>
+    <li>Don't spend a lot of time unless you want to get sunburnt.</li>
+</div>
+
+    <script src="script.js"></script>
+    <script src="stopwatch.js"></script>
   <!-- Include this script in your existing JavaScript code -->
   <script>
     function updateMercuryTime() {

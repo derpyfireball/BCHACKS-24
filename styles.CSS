@@ -18,23 +18,22 @@ p {
 }
 
 #fun-fact-container {
+  position: absolute;
+  top: 10px;
   font-family: Arial, sans-serif;
   font-size: 18px;
   color: #ffffff;
   padding: 10px;
-  border: 1px solid #000000;
   text-align: center;
-  margin-top: 20px;
-  border-radius: 10px; /* Added border-radius for rounded edges */
+  border-radius: 30px; /* Added border-radius for rounded edges */
   background-color: #212121; /* Added background color for the box */
   background: #212121;
   box-shadow: 15px 15px 30px rgb(25, 25, 25),
               -15px -15px 30px rgb(60, 60, 60);
   border-radius: 30px;
   font-family: 'Bebas Neue', sans-serif;
-  width: 15%; /* Adjusted the width to be roughly 1/3 of the container */
-  margin-left: auto;
-  margin-right: auto;
+  width: 20%; /* Adjusted the width to be roughly 1/3 of the container */
+  margin-left: 975px;
   opacity: 0; /* Set initial opacity to 0 */
   animation: fadeInOut 10s infinite; /* Added animation for fade-in and fade-out */
 }
@@ -103,7 +102,7 @@ p {
 .home-button {
     position: fixed; /* Fixed position */
     top: 10px; /* 10px from the top */
-    left: 10px; /* 10px from the left */
+    left: 15px; /* 10px from the left */
     padding: 10px 20px;
     font-size: 16px;
     background-color: #ffffff; /* Set background color to white */
@@ -200,8 +199,11 @@ p {
 
 /* Add this style to adjust the position of the planet title */
 .planet-title {
-    margin-top: 50px; /* Adjust the margin-top value as needed */
+    position: absolute;
+    top: -8px;
+    left: 100px;/* Adjust the margin-top value as needed */
     color:  #ffffff;
+    text-align: left;
     font-family: 'Bebas Neue', sans-serif;
 }
 
@@ -358,11 +360,11 @@ body {
     color: rgb(197, 197, 197);
   }
   
-  .container { 
-    position: relative;
+  .containerx { 
+    position: fixed;
     align-items: center;
-    right: 30px;
-    top: 425px;
+    left: 510px;
+    bottom: 080px;
 
 } 
   
@@ -377,7 +379,7 @@ h1 {
 } 
   
 .txt { 
-    font-size: 10px; 
+    font-size: 15px; 
     color: #ffffff; 
 } 
   

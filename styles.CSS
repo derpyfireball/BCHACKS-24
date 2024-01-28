@@ -201,19 +201,43 @@ body {
   }
   
   .card {
-    position: relative;
-    width: 220px;
-    height: 250px;
+    right: 10px;
+    width: 25%;
+    height: 1%;
+    position: fixed;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    padding: 20px 10px;
-    border-radius: 10px;
-    backdrop-filter: blur(30px);
-    background-color: rgba(65, 65, 65, 0.308);
-    border: 1px solid rgba(255, 255, 255, 0.089);
-    cursor: pointer;
+    padding: 10px;
+    background: #212121;
+    box-shadow: 15px 15px 30px rgb(25, 25, 25),
+                -15px -15px 30px rgb(60, 60, 60);
+    border-radius: 30px;
+    border: px solid rgba(255, 255, 255, 0.089);
+  }
+
+  .card2 {
+    width: 400px;
+    height: 500px;
+    background: #212121;
+    box-shadow: 15px 15px 30px rgb(25, 25, 25),
+                -15px -15px 30px rgb(60, 60, 60);
+    border-radius: 30px;
+    margin-top: 30px;
+    margin-left: 840px;
+
+   }
+
+  .card2 h1{
+    color:#ffffff;
+    size: 50px;
+    padding: 10px 20px;
+  }
+
+  .card2 li{
+    size:10px;
+    margin-bottom: 60px;
   }
   
   .planet {
@@ -272,14 +296,3 @@ body {
     color: rgb(237, 237, 237);
   }
 
-.card {
-    width: 300px;
-    height: 600px;
-    background: #212121;
-    box-shadow: 15px 15px 30px rgb(25, 25, 25),
-                -15px -15px 30px rgb(60, 60, 60);
-    border-radius: 30px;
-    margin-top: 30px;
-    margin-left: 900px;
-
-   }

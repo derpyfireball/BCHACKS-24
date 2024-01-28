@@ -52,6 +52,34 @@
         <li>Time is not the same so ignore it as much as you can.</li>
       </div>
 
+      <button1 onclick="openStopwatchModal()">Stopwatch</button1>
+      <button2 onclick="openTimerModal()">Timer</button2>
+    </div>
+    
+   <!-- Modal for Stopwatch -->
+<div id="stopwatchModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeStopwatchModal()">&times;</span>
+      <!-- Content for Stopwatch -->
+      <p id="stopwatchDisplay">0 seconds</p>
+      <button onclick="startStopwatch()">Start</button>
+      <button onclick="stopStopwatch()">Stop</button>
+    </div>
+  </div>
+    
+    <!-- Modal for Timer -->
+    <div id="timerModal" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeTimerModal()">&times;</span>
+          <!-- Content for Timer -->
+          <label for="timerInput">Set Timer (seconds):</label>
+          <input type="number" id="timerInput" min="1" placeholder="Enter seconds">
+          <button onclick="startTimer()">Start Timer</button>
+          <p id="timerDisplay">0 seconds</p>
+        </div>
+      </div>
+
+
     <script src="script.js"></script>
     <script>
         // Array of fun facts
@@ -71,12 +99,87 @@
     </script>
 
     <script>
+        let timerInterval;
+        let timerSeconds = 0;
         // Function to update the current time
         function updateCurrentTime() {
             const currentTimeElement = document.getElementById('currentTime');
             const currentTime = new Date().toLocaleTimeString();
             currentTimeElement.innerHTML = `<strong>${currentTime}</strong>`;
         }
+        let stopwatchInterval;
+  let stopwatchSeconds = 0;
+
+  function updateStopwatchDisplay() {
+    document.getElementById('stopwatchDisplay').innerText = `${stopwatchSeconds} seconds`;
+  }
+
+  function startStopwatch() {
+    stopwatchInterval = setInterval(function () {
+      stopwatchSeconds++;
+      updateStopwatchDisplay();
+    }, 1000);
+  }
+
+  function stopStopwatch() {
+    clearInterval(stopwatchInterval);
+  }
+
+  function closeStopwatchModal() {
+    document.getElementById('stopwatchModal').style.display = 'none';
+    // Reset stopwatch when closing modal
+    stopStopwatch();
+    stopwatchSeconds = 0;
+    updateStopwatchDisplay();
+  }
+
+  // Function to open the Timer modal
+  function openTimerModal() {
+    document.getElementById('timerModal').style.display = 'block';
+  }
+
+  // Function to close the Timer modal
+  function closeTimerModal() {
+    document.getElementById('timerModal').style.display = 'none';
+    // Reset timer when closing modal
+    stopTimer();
+    timerSeconds = 0;
+    document.getElementById('timerInput').value = ''; // Clear input field
+    updateTimerDisplay();
+  }
+
+  // Function to update the timer display
+  function updateTimerDisplay() {
+    document.getElementById('timerDisplay').innerText = `${timerSeconds} seconds`;
+  }
+
+  // Function to start the timer
+  function startTimer() {
+    const inputSeconds = parseInt(document.getElementById('timerInput').value, 10);
+    if (!isNaN(inputSeconds) && inputSeconds > 0) {
+      timerSeconds = inputSeconds;
+      updateTimerDisplay();
+
+      timerInterval = setInterval(function () {
+        timerSeconds--;
+        updateTimerDisplay();
+
+        if (timerSeconds === 0) {
+          stopTimer();
+          alert('Timer finished!');
+        }
+      }, 1000);
+    } else {
+      alert('Please enter a valid number greater than 0.');
+    }
+  }
+
+  // Function to stop the timer
+  function stopTimer() {
+    clearInterval(timerInterval);
+  }
+
+
  // Function to generate random weather information
  function generateRandomWeather() {
         const weatherConditions = ['Cold and mysterious', 'Windy and desolate', 'Occasional ice storms', 'Sparse atmosphere'];

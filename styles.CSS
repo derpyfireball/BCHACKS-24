@@ -217,6 +217,79 @@ body {
     border: px solid rgba(255, 255, 255, 0.089);
   }
 
+    /* Style for buttons */
+button1 {
+  background-color: #ffffff;
+  color: #000000;
+  position: fixed;
+  bottom:80px;
+  left:480px;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+button2 {
+    background-color: #ffffff;
+    color: #000000;
+    position: fixed;
+    bottom:80px;
+    left:680px;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+
+/* Hover effect for buttons */
+button1:hover {
+  background-color: #454141;
+  color: #000000;
+}
+button2:hover {
+    background-color: #454141;
+    color: #000000;
+  }
+
+/* Style for modal */
+.modal {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.modal-content {
+  background-color: #fefefe;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Style for close button in modal */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: #555;
+}
+
+
   .card2 {
     width: 400px;
     height: 500px;

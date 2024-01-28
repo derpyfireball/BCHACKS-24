@@ -1,3 +1,10 @@
+main{
+    background: #212121;
+    box-shadow: 15px 15px 30px rgb(25, 25, 25),
+                -15px -15px 30px rgb(60, 60, 60);
+    
+}
+
 body {
     text-align: center;
     margin: 50px;
@@ -49,13 +56,14 @@ p {
 
 .dropdown {
     position: relative;
+    top: 250px;
     display: inline-block;
     font-family: 'Bebas Neue', sans-serif;
 }
 
 /* Style the dropdown label and select */
 .dropdown label, .dropdown select {
-    background-color: #3498db;
+    background: #212121;
     color: #fff;
     padding: 10px;
     font-size: 16px;
@@ -68,8 +76,9 @@ p {
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f9f9f9;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    background: #ffffff;
+    box-shadow: 15px 15px 30px rgb(25, 25, 25),
+                -15px -15px 30px rgb(60, 60, 60);
     z-index: 1;
     width: 100%; /* Match the width of the button */
     top: 40px; /* Adjust the top spacing */

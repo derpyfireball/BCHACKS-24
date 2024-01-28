@@ -205,18 +205,16 @@ body {
     position: fixed;
     width: 25%;
     height: 25%;
-    display: inline-grid;
-    justify-content: space-even;
+    display: flex;
+    justify-content: space-around;
     padding: 20px 10px;
     background: #212121;
     box-shadow: 15px 15px 30px rgb(25, 25, 25),
                 -15px -15px 30px rgb(60, 60, 60);
     border-radius: 30px;
+    bottom: 60px;
     left: 50px;
-    bottom:60px;
-
-
-   }
+}
    .card2{
     width: 400px;
     height: 610px;
@@ -224,8 +222,8 @@ body {
     box-shadow: 15px 15px 30px rgb(25, 25, 25),
                 -15px -15px 30px rgb(60, 60, 60);
     border-radius: 30px;
-    position: absolute;
-    right: 40px;
+    position: relative;
+    left: 820px;
 
    }
 
@@ -243,7 +241,7 @@ body {
   .image{
     position: absolute;
     left: 20px;
-    top: 70px
+    top: 80px
   }
   .city {
     font-weight: 700;
@@ -251,13 +249,13 @@ body {
     letter-spacing: 1.2px;
     color: white;
     position: absolute;
-    top: 30px;
+    top: 20px;
     left:60px;
   }
   
   .weather {
     position: absolute;
-    top: 30px;
+    top: 20px;
     left: 210px;
     font-weight: 600;
     font-size: 1.2em;
@@ -267,7 +265,7 @@ body {
   
   .temp {
     position: absolute;
-    top: 80px;
+    top: 20px;
     left: 235px;
     font-size: 4em;
     color: white;
@@ -275,23 +273,23 @@ body {
   
   .minmaxContainer {
     position: absolute;
-    top: 180px;
-    left: 100px;
-    width: 90%;
+    top: 165px;
+    left: 85px;
+    width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
   }
   
   .min,
   .max {
-    width: 50%;
+    width: 90%;
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
-    justify-content:space-evenly;
-    padding: 0px 20px;
-    gap: 4px;
+    align-items:flex-end;
+    justify-content:end;
+    padding: 0px 10px;
+    gap: 1px;
   }
   
   .max {
@@ -301,14 +299,14 @@ body {
   
   .maxHeading,
   .minHeading {
-    font-size: 1em;
+    font-size: 0.7em;
     font-weight: 600;
     color: white;
   }
   
   .maxTemp,
   .minTemp {
-    font-size: 0.9em;
+    font-size: 0.6em;
     font-weight: 500;
     color: rgb(197, 197, 197);
   }

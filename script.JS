@@ -46,8 +46,4 @@ function navigateToPlanet() {
     if (selectedOption !== "Null") {
         window.location.href = selectedOption + ".html";
     }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 4520980550046ac06ad83d43a6ab546023c919db
